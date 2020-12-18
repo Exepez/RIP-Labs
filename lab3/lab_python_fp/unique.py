@@ -1,0 +1,57 @@
+from gen_random import gen_random
+
+
+class Unique(object):
+    def __init__(self, items, **kwargs):
+        self.set_unique = set()
+        self.items = items
+        if len(kwargs) != 0:
+            self.ignore_case = kwargs
+        else:
+            self.ignore_case = False
+    def __iter__(self):
+            return self
+    def __next__(self):
+        while True:
+            for item in self.items:
+                temp_item = item
+                if (temp_item not in self.set_unique) and not(self.ignore_case and temp_item.swapcase() in self.set_unique):
+                    self.set_unique.add(temp_item)
+                    return temp_item
+            else:
+                raise StopIteration
+
+
+
+def main():
+    data1 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
+    print(data1)
+    itr1 = Unique(data1)
+    for i1 in itr1:
+        print(i1, end=' ')
+    print('\n', end='')
+
+    data2 = ['a', 'A', 'b', 'B', 'a', 'A', 'b', 'B']
+    print(data2)
+    itr2 = Unique(data2)
+    for i2 in itr2:
+        print(i2, end=' ')
+    print('\n', end='')
+
+    print(data2)
+    itr3 = Unique(data2, ignor_case=True)
+    for i3 in itr3:
+        print(i3, end=' ')
+    print('\n', end='')
+
+    data3 = gen_random(5, 1, 3)
+    for i4 in data3:
+        print(i4, end=' ')
+    print('\n', end='')    
+    itr4 = Unique(data3)
+    for i5 in itr4:
+        print(i5, end=' ')
+
+
+if __name__ == "__main__":
+    main()
