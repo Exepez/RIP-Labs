@@ -1,0 +1,15 @@
+table{
+    border: 1px solid Black;
+}
+ul{
+    width: 160px;
+}
+li:nth-child(2n){
+    background-color: #81c46d;
+}
+li:nth-child(2n+1){
+    background-color: #e2e046;
+}
+li:nth-child(1){
+    background-color: #ffffff;
+}
