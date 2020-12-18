@@ -1,0 +1,50 @@
+[
+	{
+        "name": "Отель1",
+		"costperday": 1000,
+		"star": 4,
+		"starcost": 250
+    },
+	{
+        "name": "Отель2",
+		"costperday": 1000,
+		"star": 5,
+		"starcost": 200
+    },
+	{
+        "name": "Отель3",
+		"costperday": 1200,
+		"star": 4,
+		"starcost": 300
+    },
+	{
+        "name": "Отель4",
+		"costperday": 300,
+		"star": 2,
+		"starcost": 150
+    },
+	{
+        "name": "Отель5",
+		"costperday": 2000,
+		"star": 5,
+		"starcost": 400
+    },
+	{
+        "name": "Отель6",
+		"costperday": 1600,
+		"star": 4,
+		"starcost": 400
+    },
+	{
+        "name": "Отель7",
+		"costperday": 900,
+		"star": 3,
+		"starcost": 300
+    },
+	{
+        "name": "Отель8",
+		"costperday": 750,
+		"star": 3,
+		"starcost": 250
+    }
+]
