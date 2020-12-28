@@ -1,0 +1,106 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Процессор Intel Core i9-10900K</h1>
+{% load static %}
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+            <img src="{% static 'images/i9-10900k.jpg' %}" width="600" height="600"class="rounded" alt="...">
+      </div>
+      <div class="col">
+        <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title">47 499 ₽</h2>
+              <h4 class="card-text">Описание</h4>
+              <p class="card-text"><small class="text-muted">Процессор Intel Core i9-10900K – чип со сбалансированной производительностью. Можно использовать его для создания различных сборок. При изготовлении применялся технологический процесс 14 нм. Он позволяет добиться небольшого потребления энергии и тепловыделения. Процессор выполнен с применением архитектуры Comet Lake. Она позволила поднять производительность в сравнении с чипами прошлого поколения. Используется десять ядер и двадцать потоков для обработки информации.</small></p>
+            </div>
+          </div>
+      </div>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col"><h2>Характеристики</h2></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="table-dark">
+        <th colspan="2">Заводские данные</th>
+      </tr>
+      <tr>
+        <td scope="row">Гарантия</td>
+        <td>36 мес.</td>
+      </tr>
+      <tr>
+        <td scope="row">Страна-производитель</td>
+        <td>Вьетнам</td>
+      </tr>
+
+      <tr class="table-dark">
+        <th colspan="2">Общие параметры</th>
+      </tr>
+      <tr>
+        <td scope="row">Модель</td>
+        <td>Intel Core i9-10900K</td>
+      </tr>
+      <tr>
+        <td scope="row">Поколение процессоров</td>
+        <td>Intel 10-е поколение</td>
+      </tr>
+      <tr>
+        <td scope="row">Год релиза</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td scope="row">Сокет</td>
+        <td>LGA 1200</td>
+      </tr>
+
+      <tr class="table-dark">
+        <th colspan="2">Ядро и архитектура</th>
+      </tr>
+      <tr>
+        <td scope="row">Техпроцесс</td>
+        <td>14 нм</td>
+      </tr>
+      <tr>
+        <td scope="row">Количество ядер</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td scope="row">Максимальное число потоков</td>
+        <td>20 шт</td>
+      </tr>
+      <tr>
+        <td scope="row">Кэш L1</td>
+        <td>640 КБ</td>
+      </tr>
+      <tr>
+        <td scope="row">Кэш L2</td>
+        <td>2,5 МБ</td>
+      </tr>
+      <tr>
+        <td scope="row">Кэш L3</td>
+        <td>20 Мб</td>
+      </tr>
+      <tr>
+
+      <tr class="table-dark">
+        <th colspan="2">Частота</th>
+      </tr>
+      <tr>
+        <td scope="row">Базовая частота процессора</td>
+        <td>3700 МГц</td>
+      </tr>
+      <tr>
+        <td scope="row">Максимальная частота в турбо режиме</td>
+        <td>5300 МГц</td>
+      </tr>    
+    </tbody>
+  </table>
+
+{% endblock %}
