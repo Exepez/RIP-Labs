@@ -1,0 +1,1 @@
+web: PYTHONPATH=$(pwd)'/src' waitress-serve --port=$PORT mysitedz.wsgi:application

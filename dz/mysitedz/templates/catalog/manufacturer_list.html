@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список производителей</h1>
+
+    {% if manufacturer_list %}
+      {% for copy in manufacturer_list.all %}
+      <p></p>
+      <div class="col">
+        <div class="card">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <svg class="bd-placeholder-img" width="1%" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <img src="{{ MEDIA_URL }}{{ copy.manufacturer_img_url }}" width="400" height="100"class="rounded">
+              </svg>
+    
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="{{ copy.get_absolute_url }}">{{ copy.namecompany }}</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %} 
+    {% else %}
+      <p>There are no manufacturers</p>
+    {% endif %} 
+{% endblock %}

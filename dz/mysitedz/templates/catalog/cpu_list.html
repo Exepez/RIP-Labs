@@ -1,0 +1,45 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список процессоров</h1>
+
+    {% if cpu_list %}
+
+      {% for copy in cpu_list.all %}
+      <p></p>
+      <div class="col">
+        <div class="card">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <svg class="bd-placeholder-img" width="25%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <img src="{{ MEDIA_URL }}{{ copy.cpu_img_url }}" width="200" height="200"class="rounded">
+              </svg>
+    
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title"><a href="{{ copy.get_absolute_url }}">{{ copy.name }}</a></h5>
+                      <p class="card-text"><small class="text-muted">{{copy.socket}}</small></p>
+                    </div>
+                    <div class="col">
+                      <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-text"><class="text-muted">{{copy.price}}</class></h5>
+                          </div>
+                        </div>
+                    </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %} 
+
+    {% else %}
+      <p>There are no cpus.</p>
+    {% endif %} 
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<h1>Домашнее задание</h1>
+<p><strong>Цель домашнего задания:</strong> изучение возможностей создания прототипа веб-приложения на основе базы данных с использованием фреймворка Django.</p>
+<h3>Стандартное задание:</h3>
+<p>Создайте прототип веб-приложения с использованием фреймворка Django на основе базы данных, реализующий концепцию master/detail. Прототип должен содержать:</p>
+<ol>
+<li>Две модели, связанные отношением один-ко-многим.</li>
+<li>Стандартное средство администрирования Django позволяет редактировать данные моделей. Желательно настроить русификацию ввода и редактирования данных.</li>
+<li>Веб-приложение формирует отчет в виде отдельного view/template, отчет выводит HTML-страницу, содержащую связанные данные из двух моделей.</li>
+<li>Для верстки шаблонов используется фреймворк Bootstrap, или аналогичный фрейворк по желанию студента.</li>
+</ol>
+
+<h3>Выполненные расширенные задания, добавляющие +1 балл на экзамене:</h3>
+<ol>
+<li>Реализация связи много-ко-многим (с возможностью редактирования данных в пользовательском интерфейсе) и развертывание приложения на облачном сервисе (например, heroku).</li>
+<li>Реализация в отчете (пункт 3 стандартного задания) графика на основе данных отчета с использованием библиотек JavaScript (например, <a href="https://c3js.org/" rel="nofollow">https://c3js.org/</a>)   и развертывание приложения на облачном сервисе (например, heroku).</li>
+</ol>
+
+<!-- <form method="POST" action="create/"> -->
+      <!-- {% csrf_token %}
+      <p>
+          <label>Введите имя</label><br>
+          <input type="text" name="name" />
+      </p>
+      <p>
+          <label>Введите возраст</label><br>
+          <input type="number" name="age" />
+      </p>
+      <input type="submit" value="Сохранить" >
+  </form>
+  {% if people.count > 0 %}
+  <h2>Список пользователей</h2>
+  <table>
+      <tr><th>Id</th><th>Имя</th><th>Возраст</th></tr>
+      {% for Motherboard in people %}
+      <tr><td>{{ Motherboard.id }}</td><td>{{ Motherboard.title }}</td><td>{{ Motherboard.socket }}</td></tr>
+      {% endfor %}
+  </table>
+  {% endif %} -->
+
+  <!-- <form method="POST" action="create/">
+    {% csrf_token %}
+    <p>
+        <label>Введите имя</label><br>
+        <input type="text" name="name" />
+    </p>
+    <p>
+        <label>Введите возраст</label><br>
+        <input type="number" name="age" />
+    </p>
+    <input type="submit" value="Сохранить" >
+</form>
+{% if people.count > 0 %}
+<h2>Список пользователей</h2>
+<table>
+    <tr><th>Id</th><th>Имя</th><th>Возраст</th></tr>
+    {% for person in people %}
+    <tr><td>{{ person.id }}</td><td>{{ person.name }}</td><td>{{ person.age }}</td></tr>
+    <td><a href="edit/{{person.id}}">Изменить</a> | <a href="delete/{{person.id}}">Удалить</a></td>
+    {% endfor %}
+</table>
+{% endif %} -->
+
+    
+
+{% endblock %}

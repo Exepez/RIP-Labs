@@ -1,0 +1,77 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<h1>Оценка товара:</h1>
+<form method="POST">
+    {% csrf_token %}
+<p>
+    <h3>Оцениваемый товар: {{motherboard.title}}</h3>
+</p>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <label for="exampleFormControlSelect1">Выберите оценку:</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="rate">
+              <option>(0)</option>
+              <option>(1) ✩ </option>
+              <option>(2) ✩✩ </option>
+              <option>(3) ✩✩✩ </option>
+              <option>(4) ✩✩✩✩  </option>
+              <option>(5) ✩✩✩✩✩  </option>
+            </select> 
+            <p></p>
+            <input type="submit" value="Оценить" >
+          </div>
+          <div class="col"><h3>Текущая оценка товара:</h3><div id='gaugeArea'><!-- Plotly chart will be drawn inside this DIV --></div></div>
+          <div class="col"></div>
+          <div class="col"></div>
+    </div>
+
+
+</form>
+<script src="https://unpkg.com/gauge-chart@latest/dist/bundle.js"></script>
+
+<script>
+  let element = document.querySelector('#gaugeArea')
+  let chartWidth = 420
+  let needleValue = 1
+  let str1 = '{{motherboard.avrrate}}'
+  var k = 2
+  var d = 100
+  if (str1.length==3)
+      { k = 1; d=10}
+  let a = str1.substr(2, k)
+  let a1 = str1.substr(0, 1)
+  var b = Number(a);
+  var b1 = Number(a1);
+
+  let gaugeOptions = {
+    hasNeedle: true,
+    outerNeedle: true,
+    needleColor: "black",
+    needleStartValue: 0,
+    arcColors: ["rgb(224,28,6)","rgb(224,144,6)","rgb(213,224,6)","rgb(112,224,6)","rgb(10,169,17)"],
+    arcDelimiters: [20,40,60,80],
+    rangeLabel: ["0","5"],
+    rangeLabelFontSize: 0,
+    arcLabels: ['1', '2', '3', '4'],
+    centralLabel: str1,
+    arcPadding: 3,
+    arcPaddingColor: 'white',
+    }
+  GaugeChart.gaugeChart(element, chartWidth, gaugeOptions).updateNeedle((b1+b/d)*20)
+</script>
+
+  
+<!-- <script>
+let calculatorElem = document.querySelector('.calculator'),
+    display = calculatorElem.querySelector('.display')
+    
+calculatorElem.addEventListener('click', evt => {
+  if (evt.target.matches('.number')) {
+    display.value = evt.target.value
+  } 
+})
+    </script> -->
+{% endblock %}
