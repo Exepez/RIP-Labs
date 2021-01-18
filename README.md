@@ -11,3 +11,6 @@
 ## Рубежные контроли:
 + **rk1**: [Отчет](https://github.com/Exepez/RIP-Labs/blob/master/rk1/%D0%A0%D0%9A1.pdf)
 + **rk2**: [Отчет](https://github.com/Exepez/RIP-Labs/blob/master/rk2/%D0%A0%D0%9A2.pdf)
+## Домашнее задание:
++ **dz**: [Отчет](https://github.com/Exepez/RIP-Labs/blob/master/dz/%D0%94%D0%97.pdf)
+
